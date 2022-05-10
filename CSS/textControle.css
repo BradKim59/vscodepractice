@@ -1,0 +1,27 @@
+.practice {
+    color: green;
+}
+.practice1 {
+    text-align: center;
+}
+.practice2 {
+    text-align:end;
+}
+.practice3 {
+    text-decoration: overline;
+}
+.practice4 {
+    text-decoration: underline;
+}
+.practice5 {
+    text-transform: uppercase;
+}
+.practice6 {
+    text-transform: lowercase;
+}
+.practice7 {
+    text-indent: 50px;
+}
+.practice8 {
+    text-indent: 20%;
+}

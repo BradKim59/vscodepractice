@@ -1,0 +1,19 @@
+div {
+    color: aqua;
+}
+
+span {
+    color: blue;
+}
+
+.color1 {
+    color: red;
+}
+
+[name="button"] {
+    background-color:cadetblue;
+}
+
+#color3 {
+    color: coral;
+}

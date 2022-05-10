@@ -8,22 +8,33 @@
     <link rel="stylesheet" href="css2.css" />
   </head>
   <body>
-    <!-- 외부에서 정의해놓은 CSS 끌고오는 방식-->
-    <div>div</div>
-
-    <p>태그</p>
-
+    <h1>
+      class 실습
+    </h1>
     <span class="redText">span 태그</span>
     <!-- 속성 설정해 놓으면 섞어서 사용 가능 -->
     <span class="yellowText bigSize">span 태그 2</span>
-    <span class="bigSize">span 태그 3</span>
-
+    
+    <h1>
+      id 실습
+    </h1>
     <!-- id는 한개만 존재 할 수 있다. -->
     <!-- 하나밖에 없으므로 많이 쓰진 않는다. -->
-    <div id="div1" class="redText">div1</div>
-
+    <div id="div1" class="redText bigSize"><b>나는 아이디</b></div>
+    
+    <h1>
+      보더 실습
+    </h1>
     <!-- 보더 -->
     <p class="border">p 태그</p>
     <div class="border">div 태그</div>
+    
+    <h1>
+      name 실습
+    </h1>
+    <!-- name 특정화한 양식을 입력한다. -->
+    <label for="fname">name 입력:</label>
+    <input type="text" id="fname" name="fname"><br><br>
+
   </body>
 </html>

@@ -2,11 +2,9 @@
 div {
     background-color: beige;
 }
-
 body {
-    background-color: hotpink;
+    background-color: whitesmoke;
 }
-
 p {
     color: blue;
 }
@@ -15,11 +13,9 @@ p {
 .redText {
     color: red;
 }
-
 .yellowText {
-    color: yellow;
+    color: green;
 }
-
 .bigSize {
     font-size: 50px;
 }
@@ -27,12 +23,13 @@ p {
 /* id 선택자 */
 #div1 {
     background-color:aqua;
+    table-layout: auto;
 }
 
 /* border 선택자, p를 붙이면 p태그에만 적용된다*/
 p.border {
-    border-style: solid;
-    border-width: 1px;
+    border-style: inset;
+    border-width: 5px;
 }
 .border {
     border-style: dashed;
