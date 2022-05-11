@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .container{
+            /* 레이아웃에 여백 넣기, 4개의 margin 속성값을 가질 때는 top, right, bottom, left 순으로 설정 */
+            margin: 10px 20px 30px 40px;
+            background-color:bisque;
+        }
+        .div1 {
+            /* padding 특정태그에 간격 설정하기*/
+            display: block;
+            height: 100px;
+            width: 100px;
+            background-color: aqua;
+            padding: 20px;
+            border: 1px solid red;
+            margin: 10px 20px 30px 40px;
+        }
+        .div2 {
+            /* inline으로 설정 시 마진값 좌우로만 설정됨 */
+            display: inline;
+            margin: 100px;
+            background-color: aqua;
+        }
+        .div3 {
+            /* inline-block으로 설정 시 마진값 상하좌우 설정 가능 */
+            display: inline-block;
+            padding: 10px;
+            margin: 200px;
+            background-color: aqua;
+            padding: 20px;
+            border: 1px solid red;
+        }
+    </style>
+    <div class="container">
+        <div class="div1">padding practice</div>
+        <div class="div2">margin practice</div>
+        <div class="div3">inline-block practice</div>
+    </div>
+</body>
+</html>
