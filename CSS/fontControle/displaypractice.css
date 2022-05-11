@@ -1,0 +1,38 @@
+.div1 {
+    /* none은 보이지 않는다. */
+    width: 140px;
+    height: 30px;
+    background-color: blue;
+    display: none;
+}
+.div2 {
+    /* none은 보이지 않는다. */
+    width: 140px;
+    height: 30px;
+    background-color:aqua;
+    display: visibility;
+}
+.div3 {
+    /* block으로 설정하면 위치 이동 가능하다 */
+    width: 140px;
+    height: 30px;
+    background-color:burlywood;
+    display: block;
+    height: 50px;
+}
+.div4 {
+    /* inline은 span과 같이 한줄로 붙게되며, 크기설정 불가해진다. */
+    width: 140px;
+    height: 30px;
+    background-color:chartreuse;
+    display: inline;
+    height: 50px;
+}
+.div5 {
+    /* inline에 block을 붙이면, 크기설정 가능해진다.*/
+    width: 140px;
+    height: 30px;
+    background-color:coral;
+    display: inline-block;
+    height: 50px;
+}
