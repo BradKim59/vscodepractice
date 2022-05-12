@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .items {
+        text-align: center;
+      }
+      #textField {
+        font-size: xx-large;
+      }
+    </style>
+    <div class="items">
+      <div id="textField" align="center"></div>
+      <div class="buttonField" align="center">
+        <button id="red" onclick="turnRed()">빨강</button>
+        <button id="blue" onclick="turnBlue()">파랑</button>
+        <button id="green" onclick="turnGreen()">초록</button>
+      </div>
+    </div>
+    <script>
+      let comment = prompt("텍스트 입력");
+
+      if (comment == "" || comment == null) {
+        alert("텍스트값을 입력해 주세요.");
+      } else {
+        document.getElementById("textField").innerText = comment;
+      }
+      function turnRed() {
+        document.getElementById("textField").style.color = "red";
+        alert("빨강색으로 변경됩니다.");
+      }
+      function turnBlue() {
+        document.getElementById("textField").style.color = "blue";
+        alert("파랑색으로 변경됩니다.");
+      }
+      function turnGreen() {
+        document.getElementById("textField").style.color = "green";
+        alert("초록색으로 변경됩니다.");
+      }
+    </script>
+  </body>
+</html>
