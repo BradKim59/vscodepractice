@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 파일 가져오기  -->
+    <script src="my_script.js"></script>
+</head>
+<body>
+    <script>
+        //변수 선언, var는 중복선언이 되는 문제가 있다.
+        var i = 10;
+        var name = '김승영';
+
+        // 상수, let도 중복선언 안됨.
+        const STUDENT_COUNT = 10;
+        let j = 10;
+
+        // 자바스타일의 문자열 병합
+        var result = name + '은' + i + '살입니다.';
+        // 나중에 추가 된 문자열 병합
+        result = '${name}은 ${i}살입니다';
+
+        // 이건 바로 실행되지 않는다.
+        function myAlert() {
+            // alert('경고3');
+
+            // console.log 웹의 콘솔창에서 확인하기
+            console.log('경고3')
+        }
+        // 내부 선언방식
+        // 이렇게 하면 실행이 먼저되서 바로 경고가 뜸
+        // alert('경고');
+    </script>
+
+    <!-- 인라인 방식 onclick 삽입 -->
+    <input type="button" value="버튼" onclick="javascript:alert('경고1')">
+    
+    <!-- 요즘 쓰는 인라인 방식 -->
+    <button onclick="alert('경고2')">버튼</button>
+
+    <!-- 내부선언방식 -->
+    <button onclick="myAlert()">버튼</button>
+
+    <!-- 외부선언방식 -->
+    <button ondblclick="showMyName()">버튼</button>
+</body>
+</html>
