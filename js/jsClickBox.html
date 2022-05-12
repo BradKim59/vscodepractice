@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .button {
+        display: inline-block;
+        border: 1px black solid;
+        background-color: grey;
+        color: antiquewhite;
+        padding: 20px;
+        width: 100px;
+        text-align: center;
+        font-size: large;
+      }
+      .convert {
+        display: inline-block;
+        border: 1px black solid;
+        background-color: white;
+        color: black;
+        padding: 20px;
+        width: 100px;
+        text-align: center;
+        font-size: large;
+      }
+    </style>
+    <span id="html" class="button" onclick="changehtml()">html</span>
+    <span id="css" class="button" onclick="changeCSS()">css</span>
+    <span id="javascript" class="button" onclick="changeJavascript()"
+      >javascript</span
+    >
+    <script>
+      function changehtml() {
+        document.getElementById('html').className = "convert";
+        document.getElementById('css').className = "button";
+        document.getElementById('javascript').className = "button";
+      }
+      function changeCSS() {
+        document.getElementById('html').className = "button";
+        document.getElementById('css').className = "convert";
+        document.getElementById('javascript').className = "button";
+      }
+      function changeJavascript() {
+        document.getElementById('html').className = "button";
+        document.getElementById('css').className = "button";
+        document.getElementById('javascript').className = "convert";
+      }
+    </script>
+  </body>
+</html>
