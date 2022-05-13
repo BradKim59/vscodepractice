@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <style>
+      .button {
+        display: inline-block;
+        border: 1px black solid;
+        background-color: grey;
+        color: antiquewhite;
+        padding: 20px;
+        width: 100px;
+        text-align: center;
+        font-size: large;
+      }
+      .convert {
+        display: inline-block;
+        border: 1px black solid;
+        background-color: white;
+        color: black;
+        padding: 20px;
+        width: 100px;
+        text-align: center;
+        font-size: large;
+      }
+    </style>
+    <span id="html" class="button">html</span>
+    <span id="css" class="button">css</span>
+    <span id="javascript" class="button">javascript</span>
+    <script>
+      $(function () {
+        $("#html").click(function () {
+          $("#html").attr("class", "convert");
+          $("#css").attr("class", "button");
+          $("#javascript").attr("class", "button");
+        });
+        $("#css").click(function () {
+          $("#html").attr("class", "button");
+          $("#css").attr("class", "convert");
+          $("#javascript").attr("class", "button");
+        });
+        $("#javascript").click(function () {
+          $("#html").attr("class", "button");
+          $("#css").attr("class", "button");
+          $("#javascript").attr("class", "convert");
+        });
+      });
+    </script>
+  </body>
+</html>
