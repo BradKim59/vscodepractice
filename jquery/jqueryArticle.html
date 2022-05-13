@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <style>
+      .header {
+        background-color: rgb(92, 92, 105);
+        color: white;
+        padding: 10px;
+      }
+      .content {
+        padding: 10px;
+        background-color: rgb(217, 217, 217);
+      }
+      .item {
+        background-color: white;
+        margin: 10px;
+      }
+      .container {
+        width: 230px;
+      }
+      .article {
+        position: relative;
+        display: inline-block;
+        background-color: rgb(92, 92, 105);
+        color: white;
+        top: 20px;
+      }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $('.article').click(function(){
+                let inputArticle = prompt("기사를 등록해 주세요.");
+                $('.content').append($('#addArticle').text(inputArticle));
+            });
+        })
+    </script>
+    <div class="container">
+      <div class="header">기사등록하기</div>
+      <div class="content">
+        <div class="item"><b>박지성</b> SBS에서 월드컵 보세요!</div>
+        <div class="item"><b>안정환</b> MBC죠..</div>
+        <div class="item"><b>이영표</b> KBS는 수신료의 가치를..</div>
+        <div class="item" id="addArticle">
+        </div>
+      </div>
+    </div>
+    <div class="article">등록하기</div>
+  </body>
+</html>
