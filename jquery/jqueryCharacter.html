@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+<body>
+    <style>
+        #character {
+            display: flex;
+            border: 1px black solid;
+            height: 500px;
+            width: 800px;
+            align-items: center;
+            justify-content: center;
+        }
+        img{
+            position:absolute;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+    <div id="character">
+        <img src="https://prodigits.co.uk/thumbs/wallpapers/p2ls/drawings/45/bbac59b612314105.jpg" alt="주인공">
+    </div>
+    <script>
+        $(function(){
+            $(document).keydown(function (event) {
+                if (event.keyCode == '37') {
+                    $('img').animate({
+                        left: '-=100px'
+                    })
+                }
+                if (event.keyCode == '39') {
+                    $('img').animate({
+                        left: '+=100px'
+                    })
+                }
+                if (event.keyCode == '38') {
+                    $('img').animate({
+                        top: '-=100px'
+                    })
+                }
+                if (event.keyCode == '40') {
+                    $('img').animate({
+                        top: '+=100px'
+                    })
+                }
+            });
+        })
+    </script>
+</body>
+</html>
