@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+<body>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        td{
+            border: 1px black solid;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+    <table>
+        <tr>
+            <td><input type="checkbox" id="allcheck">확인</td>
+            <td>제목</td>
+            <td>글쓴시간</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" id="subcheck1"></td>
+            <td name="subject1">111111</td>
+            <td>11:11:00</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" id="subcheck2"></td>
+            <td name="subject2">22222</td>
+            <td>11:11:00</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" id="subcheck3"></td>
+            <td name="subject3">ㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁㄴㅇ</td>
+            <td>11:11:00</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" id="subcheck4"></td>
+            <td name="subject4">ㅁㄴㅇㅁㄴㅇ3333</td>
+            <td>11:11:00</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" id="subcheck5"></td>
+            <td name="subject5">ㅁ44444ㅇㅁㄴㅇㅁㄴㅇ</td>
+            <td>11:11:00</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" id="subcheck6"></td>
+            <td name="subject6">ㅁㄴ55555ㄴㅇ</td>
+            <td>11:11:00</td>
+        </tr>
+    </table>
+    <br>
+    <input type="button" value="로그" id="logmark">
+    <script>
+    $(function () {
+        $('#allcheck').click(function () {
+            if ($('#allcheck').is(':checked') == true) {
+                $(':checkbox').prop('checked', true)
+            } else {
+                $(':checkbox').prop('checked', false)
+            }
+        });
+        $('#logmark').click(function () {
+            if ($("input:checkbox[id=subcheck1]").is(':checked')) {
+                console.log($("[name=subject1]").text());
+            }
+            if($("input:checkbox[id=subcheck2]").is(':checked')) {
+                console.log($("[name=subject2]").text());
+            }
+            if($("input:checkbox[id=subcheck3]").is(':checked')) {
+                console.log($("[name=subject3]").text());
+            }
+            if($("input:checkbox[id=subcheck4]").is(':checked')) {
+                console.log($("[name=subject4]").text());
+            }
+            if($("input:checkbox[id=subcheck5]").is(':checked')) {
+                console.log($("[name=subject5]").text());
+            }
+            if($("input:checkbox[id=subcheck6]").is(':checked')) {
+                console.log($("[name=subject6]").text());
+            }
+        });
+    });
+    </script>
+</body>
