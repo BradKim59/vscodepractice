@@ -10,45 +10,57 @@
   </head>
   <body>
     <div id="app">
-        <input v-model="query" placeholder="검색어">
-        <ul>
-            <li v-for="item in realtimeArrivalList">
-                {{item.trainLineNm}}, {{item.arvlMsg2}}
-            </li>
-        </ul>
+      <input v-model="query" placeholder="검색어" />
+      <div>{{message}}</div>
+      <ul>
+        <li v-for="item in realtimeArrivalList">
+          {{item.trainLineNm}}, {{item.arvlMsg2}}
+        </li>
+      </ul>
     </div>
 
     <script>
       let app = new Vue({
         el: "#app",
-        data:{
-            query: '',
-            realtimeArrivalList: [], //전체 데이터
+        data: {
+          message: "",
+          query: "",
+          realtimeArrivalList: [], //전체 데이터
         },
-        created: function(){
+        created: function () {
           // 통신
           this.getRealtimeStationArrival();
-          
-          // 디바운스 적용된 검색 함수 정의
-          this.debouncedSearch = _.debounce(this.getRealtimeStationArrival, 1000);
 
+          // 디바운스 적용된 검색 함수 정의
+          this.debouncedSearch = _.debounce(
+            this.getRealtimeStationArrival,
+            1000
+          );
         },
         methods: {
-            getRealtimeStationArrival: function () {
-              //this scope를 다르게 함
-              let vm = this;
-            fetch(`http://swopenapi.seoul.go.kr/api/subway/sample/json/realtimeStationArrival/0/5/${this.query}`)
-              .then(response => response.json())
-              .then(function(json){
-                  vm.realtimeArrivalList = json.realtimeArrivalList;
+          getRealtimeStationArrival: function () {
+            //this scope를 다르게 함
+            let vm = this;
+
+            fetch(
+              `http://swopenapi.seoul.go.kr/api/subway/sample/json/realtimeStationArrival/0/5/${this.query}`
+            )
+              .then((response) => response.json())
+              .then(function (json) {
+                vm.realtimeArrivalList = json.realtimeArrivalList;
+                vm.message = "";
+              })
+              .catch(function (error) {
+                vm.message = "에러! API 요청에 오류가 있습니다.";
               });
           },
         },
-        watch:{
-            query: function(val){
-                this.debouncedSearch(val)
-            }
-        }
+        watch: {
+          query: function (val) {
+            this.message = "로딩....";
+            this.debouncedSearch(val);
+          },
+        },
       });
     </script>
   </body>
